@@ -1,0 +1,117 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    height: 100vh;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: white;
+    color: black;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+a:link {
+    color: #6495ed;
+}
+
+a:visited {
+    color: #6495ed;
+}
+
+a:focus {
+    color: #6495ed;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #6495ed;
+}
+
+a:active {
+    color: #6495ed;
+}
+
+a.header {
+    color: black;
+}
+
+header {
+    margin-top: 15px;
+    min-height: 50px;
+}
+
+footer {
+    min-height: 50px;
+    margin-top: auto;
+    padding-bottom: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+hr {
+    height: 1px;
+    background-color: #202131;
+    border: 1px #202131;
+}
+
+article.main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 75vh;
+}
+
+img.emoji {
+    /* Since we are using SVGs, you have to change the width using CSS */
+    width: 1.2em;
+    height: 1.2em;
+    /* 
+    This is to make the emojis feel like actual emojis to 
+    the user and they won't act like images. This makes the emojis
+    non-reactive to any mouse events such as dragging, 
+    hovering, clicking etc. Makes it feel like its actual text.
+    */
+    pointer-events: none;
+    cursor: text;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: rgb(39, 43, 46);
+        color: white;
+    }
+    hr {
+        height: 1px;
+        background-color: #bbbbc0;
+        border: 1px #bbbbc0;
+    }
+    a.header {
+        color: white;
+    }
+}
