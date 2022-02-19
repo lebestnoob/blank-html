@@ -8,7 +8,7 @@ var path = window.location.pathname;
 
 // Title truncate
 var title_hostname = hostname;
-var truncate = 10;
+var truncate = 12;
 if (hostname.length > truncate)
     title_hostname = hostname.substring(0, truncate) + "…";
 
