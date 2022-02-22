@@ -115,3 +115,25 @@ img.emoji {
         color: white;
     }
 }
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    body {
+        margin: 0 auto;
+        max-width: 640px;
+        max-height: 50px;
+    }
+    header {
+        position: relative;
+    }
+    article.main {
+        position: relative;
+    }
+    footer {
+        position: absolute;
+        margin: 0 auto;
+        bottom: -200px;
+        min-height: 50px;
+        width: 640px;
+    }
+}

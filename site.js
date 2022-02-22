@@ -40,7 +40,7 @@ footer.innerText = "";
 // Footer link
 link.href = URL;
 link.textContent = hostname;
-footer.append(link);
+footer.appendChild(link);
 
 // Year
 copyright.innerText = year;
