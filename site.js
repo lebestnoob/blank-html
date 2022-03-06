@@ -26,24 +26,44 @@ var link = document.createElement("a");
 var dicebear =
     "https://avatars.dicebear.com/api/miniavs/" + encode_host + ".png";
 
-// Favicon
-favicon.href = dicebear;
+// Site modifications
 
-// Title
-if (path == "/" || path == "/index" || path == "/index.html" || path == "")
-    document.title = "Home - " + title_name;
-else document.title = "404 - " + title_name;
+function modify_site() {
+    // Favicon
+    favicon.href = dicebear;
 
-// References to domain
-if (header) header.innerText = site_name;
-footer.innerText = "";
-// Footer link
-link.href = URL;
-link.textContent = hostname;
-footer.appendChild(link);
+    // Title
+    if (path == "/" || path == "/index" || path == "/index.html" || path == "")
+        document.title = "Home - " + title_name;
+    else document.title = "404 - " + title_name;
 
-// Year
-copyright.innerText = year;
+    // References to domain
+    if (header) header.innerText = site_name;
+    footer.innerText = "";
+    // Footer link
+    link.href = URL;
+    link.textContent = hostname;
+    footer.appendChild(link);
 
-// Icon
-if (icon) icon.src = dicebear;
+    // Year
+    copyright.innerText = year;
+
+    // Icon
+    if (icon) icon.src = dicebear;
+}
+
+// Invoke function
+modify_site();
+
+// Fallback if defer does not work in IE.
+if (window.document.documentMode) window.onload = modify_site();
+
+// https://stackoverflow.com/questions/49986720/how-to-detect-internet-explorer-11-and-below-versions
+
+// Older IE
+function is_IE() {
+    return window.navigator.userAgent.match(/MSIE|Trident/) !== null;
+}
+if (is_IE) {
+    window.onload = modify_site();
+}

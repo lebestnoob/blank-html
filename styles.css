@@ -116,12 +116,15 @@ img.emoji {
     }
 }
 
+
+/* IE 11 support */
+
 @media all and (-ms-high-contrast: none),
 (-ms-high-contrast: active) {
     body {
         margin: 0 auto;
         max-width: 640px;
-        max-height: 50px;
+        min-height: 50px;
     }
     header {
         position: relative;
@@ -130,10 +133,30 @@ img.emoji {
         position: relative;
     }
     footer {
-        position: absolute;
-        margin: 0 auto;
-        bottom: -200px;
         min-height: 50px;
-        width: 640px;
+        min-width: 640px;
+        margin-top: 50%;
+    }
+}
+
+
+/* Old browsers without support? */
+
+@supports not (justify-content: center) {
+    body {
+        margin: 0 auto;
+        max-width: 640px;
+        min-height: 50px;
+    }
+    header {
+        position: relative;
+    }
+    article.main {
+        position: relative;
+    }
+    footer {
+        min-height: 50px;
+        min-width: 640px;
+        margin-top: 50%;
     }
 }
