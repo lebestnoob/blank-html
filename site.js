@@ -24,7 +24,7 @@ var footer = document.getElementById("footer-left");
 var icon = document.getElementById("icon");
 var link = document.createElement("a");
 var dicebear =
-    "https://avatars.dicebear.com/api/miniavs/" + encode_host + ".png";
+    "https://api.dicebear.com/9.x/miniavs/png?seed=" + encode_host;
 
 // Site modifications
 
